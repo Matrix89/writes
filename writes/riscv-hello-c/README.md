@@ -49,7 +49,7 @@ void enter() {
 }
 ```
 
-*Awesome!* we're in C, because we're going to use qemu to run the code the easiest way to get IO is to use UART, It's quite a big standart and I could write a whole post about it but for now we only need to know that according to qemu (source)[https://github.com/qemu/qemu/blob/master/hw/riscv/virt.c#L64] it's memory mapped at address `0x10000000` and writing to it will make things appear on the screen. 
+*Awesome!* we're in C, because we're going to use qemu to run the code the easiest way to get IO is to use UART, It's quite a big standart and I could write a whole post about it but for now we only need to know that according to qemu [source](https://github.com/qemu/qemu/blob/master/hw/riscv/virt.c#L64) it's memory mapped at address `0x10000000` and writing to it will make things appear on the screen. 
 
 UART has some registers for controlling it for now we only care about the line status register(or LSR) located at offset `0x05` from the base uart address(the full list of register can be found [here](https://en.wikibooks.org/wiki/Serial_Programming/8250_UART_Programming#UART_Registers)).
 The LSR can tell us whether we can write data the the UART buffer, the possible values of this register are [here](https://en.wikibooks.org/wiki/Serial_Programming/8250_UART_Programming#Line_Status_Register)
