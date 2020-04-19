@@ -117,7 +117,7 @@ We should see `Hello RISC-V` being printed in the console \o/.
 
 This might not be much but It's a good start, for writing a whole kernel. In the future I'd love to cover things like: interrupts memory management, unprivilaged ISA.
 
-Intreasting reads aboud RISC-V
+Interesting  reads aboud RISC-V
 ==
 
 [The Adventures of OS: Making a RISC-V Operating System using Rust](https://osblog.stephenmarz.com/index.html)
