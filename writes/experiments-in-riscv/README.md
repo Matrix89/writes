@@ -13,7 +13,7 @@ Hello RISC-V
 
 When a RISC-V cpu starts all its harts(hardware threads) start executing code from the address `0x80000000`. In theory we could just write to the UART address to get things on the screen but since I don't like writing lots of assembly lets first jump to C and then display our message. To jump to C we need to setup the stack and park all the harts but one. The whole assembly code that setups stacks for each hart and parks not needed harts looks like this:
 
-```asm
+```assembly
 .equ STACK_SIZE, 1024
 
 .global _start
